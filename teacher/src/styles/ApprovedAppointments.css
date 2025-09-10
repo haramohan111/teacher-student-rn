@@ -1,0 +1,43 @@
+.approved-appointments {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.appointments-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.approve-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.approve-btn:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
