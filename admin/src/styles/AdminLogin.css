@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 100vh;
   /* background-color: #f5f5f5; */
-    background-image: url('/2.jpg'); /* ✅ Path relative to public folder */
+    /* background-image: url('/2.jpg');  */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
