@@ -84,7 +84,9 @@ const AddStudent: React.FC = () => {
         email: formData.email,
         studentId: formData.studentId,
         password: formData.password,
-        courses: formData.courses
+        courses: formData.courses,
+        verified: false, // default value
+        status: "active" // or another default status as required
       };
 
       const resultAction = await dispatch(addStudent(studentData));
