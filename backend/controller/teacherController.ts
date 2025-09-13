@@ -6,9 +6,16 @@ import fs from "fs";
 import cloudinary from "../utils/cloudinary";
 const teachersCollection = db.collection("teachers");
 
+
+
 export const getAllTeachers = async (req: Request, res: Response): Promise<void> => {
+  
   try {
+      const user = (req as any).user;
+  console.log("Authenticated user:", user.uid, user.email);
     const snapshot = await teachersCollection.get();
+
+
     const teachers = snapshot.docs.map(doc => ({ id: doc.id, ...(doc.data() as any) }));
     res.json(teachers);
   } catch (err: any) {
