@@ -71,7 +71,7 @@ const Sidebar = () => {
   const toggleHover = () => {
     const newState = !hoverEnabled;
     setHoverEnabled(newState);
-    localStorage.setItem('sidebarHoverEnabled', newState);
+    localStorage.setItem('sidebarHoverEnabled', newState.toString());
 
     if (!newState) {
       const updatedStates: { [key: string]: { isHovering: boolean; menuOpen: boolean } } = {};

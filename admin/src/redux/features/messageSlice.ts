@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { db } from "../../../../firebase";
+import { db } from "../../../firebase";
 import {
   collection,
   addDoc,
@@ -9,7 +9,7 @@ import {
   Timestamp,
   DocumentData,
 } from "firebase/firestore";
-import { RootState } from "../../store";
+import { RootState } from "../store";
 
 // Message interface
 export interface Message {
