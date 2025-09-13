@@ -4,6 +4,12 @@ import api from "../../../services/api";
 
 // ✅ Interfaces
 export interface User {
+  id: any;
+  status: any;
+  role: any;
+  firstName: any;
+  lastName: any;
+  lastLogin: string | number | Date;
   _id: string;
   name: string;
   email: string;

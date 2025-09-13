@@ -19,7 +19,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="admin-dashboard">
-      <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+      <Sidebar  />
 
       <div className="main-content">
         <Header />

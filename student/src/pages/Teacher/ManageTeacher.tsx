@@ -29,8 +29,10 @@ const ManageTeacher: React.FC = () => {
     if (!sortConfig.key) return 0;
     const key = sortConfig.key;
     const dir = sortConfig.direction === 'asc' ? 1 : -1;
-    if (a[key] < b[key]) return -1 * dir;
-    if (a[key] > b[key]) return 1 * dir;
+    const aValue = a[key] ?? '';
+    const bValue = b[key] ?? '';
+    if (aValue < bValue) return -1 * dir;
+    if (aValue > bValue) return 1 * dir;
     return 0;
   });
 
