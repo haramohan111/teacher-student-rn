@@ -1,6 +1,6 @@
 // src/pages/Login/SignupLogin.tsx
 import React, { useState } from 'react';
-import { auth } from '../../../firebase';
+import { auth } from '../../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, UserCredential } from 'firebase/auth';
 import axios from 'axios';
 

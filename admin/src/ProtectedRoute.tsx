@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
-import { auth, db } from "../firebase";
+import { auth, db } from "./firebase";
 
 interface Props {
   children?: JSX.Element;    // optional children
