@@ -8,6 +8,8 @@
 
 {
   "compilerOptions": {
+    "outDir": "dist",          // all compiled JS goes here
+    "rootDir": "src", 
     "target": "ES6",
     "module": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
