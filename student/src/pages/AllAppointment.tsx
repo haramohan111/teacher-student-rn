@@ -1,6 +1,6 @@
 // src/pages/Student/AllAppointments.tsx
 import React, { useEffect, useState } from "react";
-import { db, auth } from "../../../teacher/firebase";
+import { db, auth } from "../../firebase";
 import { collection, query, where, getDocs, doc, getDoc, DocumentData } from "firebase/firestore";
 import "../styles/AllAppointments.css";
 
