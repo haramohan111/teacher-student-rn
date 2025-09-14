@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.upload = void 0;
+const express_1 = __importDefault(require("express"));
+const multer_1 = __importDefault(require("multer"));
+const teacherController_1 = require("../controller/teacherController");
+const authMiddleware_1 = require("../middleware/authMiddleware");
+const router = express_1.default.Router();
+// const upload = multer({ dest: "uploads" });
+// import multer from "multer";
+const storage = multer_1.default.memoryStorage();
+exports.upload = (0, multer_1.default)({ storage });
+router.post("/teachers", exports.upload.single("profileFile"), authMiddleware_1.verifyFirebaseToken, teacherController_1.addTeacher);
+router.get("/teachers", authMiddleware_1.verifyFirebaseToken, teacherController_1.getAllTeachers);
+router.put("/teachers/:id", exports.upload.single("profileFile"), authMiddleware_1.verifyFirebaseToken, teacherController_1.updateTeacher);
+router.get("/teachers/:id", authMiddleware_1.verifyFirebaseToken, teacherController_1.getTeacherById);
+router.delete("/teachers/:id", authMiddleware_1.verifyFirebaseToken, teacherController_1.deleteTeacher);
+exports.default = router;

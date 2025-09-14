@@ -6,6 +6,6 @@
     "outDir": "dist",
     "rootDir": ".", // Set rootDir to the backend folder
     "strict": true,
-        "resolveJsonModule": true,
+    "resolveJsonModule": true,
   }
 }
