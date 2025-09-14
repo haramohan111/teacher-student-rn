@@ -6,16 +6,7 @@ import { fetchUsers } from "../../redux/features/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../../redux/store";
 
-// Define User interface
-export interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  role: string;
-  status: string;
-  lastLogin: string;
-}
+import { User } from "../../types/user";
 
 const ManageUsers: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();

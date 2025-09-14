@@ -1,15 +1,10 @@
 // src/redux/features/user/userSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import api from "../../../services/api";
+import { User } from "../../../types/user";
 
-// ✅ Interfaces
-export interface User {
-  _id: string;
-  name: string;
-  email: string;
-  phone?: string;
-  // add other fields as needed
-}
+
+
 
 interface UsersState {
   users: User[];
@@ -118,7 +113,7 @@ const userSlice = createSlice({
     });
     builder.addCase(updateUser.fulfilled, (state, action: PayloadAction<User>) => {
       state.status = "succeeded";
-      const index = state.users.findIndex((u) => u._id === action.payload._id);
+      const index = state.users.findIndex((u) => u.id === action.payload.id);
       if (index !== -1) state.users[index] = action.payload;
     });
     builder.addCase(updateUser.rejected, (state, action) => {
@@ -133,7 +128,7 @@ const userSlice = createSlice({
     });
     builder.addCase(deleteUser.fulfilled, (state, action: PayloadAction<string>) => {
       state.status = "succeeded";
-      state.users = state.users.filter((u) => u._id !== action.payload);
+      state.users = state.users.filter((u) => u.id !== action.payload);
     });
     builder.addCase(deleteUser.rejected, (state, action) => {
       state.status = "failed";
