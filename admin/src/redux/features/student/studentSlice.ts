@@ -1,6 +1,6 @@
 // src/redux/features/student/studentSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { db } from "../../../../firebase";
+import { db } from "../../../firebase";
 import { collection, getDocs, doc, updateDoc, addDoc } from "firebase/firestore";
 
 export interface Student {

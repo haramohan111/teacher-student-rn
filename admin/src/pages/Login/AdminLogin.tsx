@@ -4,9 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {  loginUser } from '../../redux/features/auth/authSlice'; // Adjust the import path as necessary
 import { useNavigate } from 'react-router-dom';
 import '../../styles/AdminLogin.css'; // Import your CSS file for styling
-import { auth } from '../../../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import axios from 'axios';
+
 import type { RootState, AppDispatch } from '../../redux/store'; // import your store types
 
 const AdminLogin: React.FC = () => {
