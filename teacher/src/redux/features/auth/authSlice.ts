@@ -78,7 +78,7 @@ const authSlice = createSlice({
         state.status = "loading";
         state.error = null;
       })
-      .addCase(loginAdmin.fulfilled, (state, action: PayloadAction<User>) => {
+      .addCase(loginAdmin.fulfilled, (state, action: PayloadAction<any>) => {
         state.status = "succeeded";
         state.user = action.payload;
       })

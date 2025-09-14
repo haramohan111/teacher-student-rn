@@ -20,7 +20,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "src"
   },
-  "include": ["src", "../student/src/pages/ScheduleAppointment.tsx"]
+  "include": ["src"]
 }
 
 
