@@ -1,6 +1,6 @@
 // src/pages/Student/ScheduleAppointment.tsx
 import React, { useEffect, useState } from "react";
-import { db, auth } from "../../../teacher/firebase";
+import { db, auth } from "../../../teacher-3333/firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import "../styles/ScheduleAppointment.css";
 
