@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import AdminLogin from './pages/Login/AdminLogin';
 import SignupLogin from './pages/Login/SignupLogin';
-import ScheduleAppointment from '../../student/src/pages/ScheduleAppointment';
+// import ScheduleAppointment from './pagesScheduleAppointment';
 import ManageTeacher from './pages/teacher/ManageTeacher';
 import ApprovedAppointments from './pages/teacher/ApprovedAppointments';
 
@@ -20,7 +20,7 @@ function App() {
         {/* <Route element={<ProtectedRoute />}> */}
           <Route path="/teacher" element={<Home />}>
             <Route path="dashboard" element={<Dashboard />} />
-             <Route path="appointment" element={<ScheduleAppointment />} />
+             {/* <Route path="appointment" element={<ScheduleAppointment />} /> */}
              <Route path="manageteacher" element={<ManageTeacher />} />
              <Route path="app-appointment" element={<ApprovedAppointments />} />
             {/* <Route path="user/add-user" element={<AddUser />} />
